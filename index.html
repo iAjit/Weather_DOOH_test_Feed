@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl1bb731255f1616845099097bcda0ba85"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl8845be3e9f0cb3e8558f024dc01c2499"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 16.4.0.0711">
   <meta name="template" content="Banner 3.0.0">
@@ -264,7 +264,7 @@ set:function(a){this.g.height=a}},width:{configurable:!0,enumerable:!0,get:funct
                   const store = nearestStore.name;
                   const temperature = current.temp; // In °F (because unitGroup=us)
                   const conditions = current.conditions;
-                  
+
                   let tempC = fahrenheitToCelsius(temperature);
                   // Update HTML
 
@@ -295,16 +295,16 @@ set:function(a){this.g.height=a}},width:{configurable:!0,enumerable:!0,get:funct
                   let iconLine = "";
 
                   // Temperature ranges in °F
-                  if (temperature >= 32 && temperature <= 46) {
+                  if (temperature >= 32 && temperature < 47) {
                     iconLine = `🥶`;
                     conditionLine = `🥶 It’s chilly at ${store}! Warm up inside. <br>Just ${minDistance.toFixed(2)} km away.`;
-                  } else if (temperature >= 47 && temperature <= 57) {
+                  } else if (temperature >= 47 && temperature < 58) {
                     iconLine = `❄️`;
                     conditionLine = `❄️ Breezy day at ${store}. Stay comfy. <br>Just ${minDistance.toFixed(2)} km away.`;
-                  } else if (temperature >= 58 && temperature <= 68) {
+                  } else if (temperature >= 58 && temperature < 69) {
                     iconLine = `🙂`;
                     conditionLine = `🙂 Perfect weather to visit ${store} today. <br>Just ${minDistance.toFixed(2)} km away.`;
-                  } else if (temperature >= 69 && temperature <= 82) {
+                  } else if (temperature >= 69 && temperature < 83) {
                     iconLine = `🔥`;
                     conditionLine = `🔥 It’s hot at ${store} – cool off inside. <br>Just ${minDistance.toFixed(2)} km away.`;
                   } else if (temperature >= 83) {
@@ -343,7 +343,7 @@ set:function(a){this.g.height=a}},width:{configurable:!0,enumerable:!0,get:funct
             containerStoreName.innerHTML = ` `;
             triggerReady();
           }
-          
+
           // Convert Fahrenheit to Celsius
           function fahrenheitToCelsius(f) {
             return ((f - 32) * 5 / 9).toFixed(1); // .toFixed(1) keeps one decimal place
